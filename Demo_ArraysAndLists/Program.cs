@@ -27,6 +27,8 @@ namespace Demo_ArraysAndLists
                 Console.WriteLine("Score: {0}", score);
             }
 
+            Console.WriteLine("\nThe average of the scores: {0}", scores.Average());
+
             Console.WriteLine("\nEnter any key to continue.");
             Console.ReadKey();
         }
