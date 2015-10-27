@@ -10,24 +10,59 @@ namespace Demo_ArraysAndLists
     {
         static void Main(string[] args)
         {
-            const int numberOfScores = 5;
+            UseArrays();
+            UseLists();
+        }
 
-            int[] scores = new int[numberOfScores];
+        static void UseArrays()
+        {
+            const int numberOfFruit = 3;
 
-            Console.WriteLine("Enter {0} quiz scores.\n", numberOfScores);
-            for (int i = 0; i < numberOfScores; i++)
+            string[] fruits = new string[numberOfFruit];
+
+
+            Console.WriteLine("Enter {0} fruits.\n", numberOfFruit);
+            for (int i = 0; i < numberOfFruit; i++)
             {
-               Console.Write("Enter a score: ");
-               scores[i] = int.Parse(Console.ReadLine());
+                Console.Write("Enter a fruit: ");
+                fruits[i] = Console.ReadLine();
+
+            }
+            ;
+            Array.Sort(fruits);
+
+            Console.WriteLine("\nThe following fruits were entered and sorted.\n");
+            foreach (var fruit in fruits)
+            {
+                Console.WriteLine("Fruit: {0}", fruit);
             }
 
-            Console.WriteLine("\nThe following scores were entered.\n");
-            foreach (var score in scores)
+            Console.WriteLine("\nEnter any key to continue.");
+            Console.ReadKey();
+        }
+
+        static void UseLists()
+        {
+            const int numberOfFruits = 3;
+
+            // int[] scores = new int[numberOfScores];
+            List<string> fruits = new List<string>();
+
+            Console.WriteLine("Enter {0} fruits.\n", numberOfFruits);
+            for (int i = 0; i < numberOfFruits; i++)
             {
-                Console.WriteLine("Score: {0}", score);
+                Console.Write("Enter a fruit: ");
+                //scores[i] = int.Parse(Console.ReadLine());
+                fruits.Add(Console.ReadLine());
             }
 
-            Console.WriteLine("\nThe average of the scores: {0}", scores.Average());
+            fruits.Sort();
+
+            Console.WriteLine("\nThe following fruits were entered and sorted.\n");
+            foreach (var fruit in fruits)
+            {
+                Console.WriteLine("Fruit: {0}", fruit);
+            }
 
             Console.WriteLine("\nEnter any key to continue.");
             Console.ReadKey();
