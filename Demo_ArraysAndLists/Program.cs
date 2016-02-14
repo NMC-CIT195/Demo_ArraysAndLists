@@ -28,7 +28,7 @@ namespace Demo_ArraysAndLists
                 fruits[i] = Console.ReadLine();
 
             }
-            ;
+
             Array.Sort(fruits);
 
             Console.WriteLine("\nThe following fruits were entered and sorted.\n");
@@ -45,14 +45,12 @@ namespace Demo_ArraysAndLists
         {
             const int numberOfFruits = 3;
 
-            // int[] scores = new int[numberOfScores];
             List<string> fruits = new List<string>();
 
             Console.WriteLine("Enter {0} fruits.\n", numberOfFruits);
             for (int i = 0; i < numberOfFruits; i++)
             {
                 Console.Write("Enter a fruit: ");
-                //scores[i] = int.Parse(Console.ReadLine());
                 fruits.Add(Console.ReadLine());
             }
 
